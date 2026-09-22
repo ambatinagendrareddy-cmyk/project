@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Contact Us | World Currency Exchange</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        (function() {
+            try {
+                var savedTheme = localStorage.getItem('worldCurrencyTheme') || 'light';
+                document.documentElement.setAttribute('data-theme', savedTheme);
+            } catch (e) {}
+        })();
+    </script>
+
+</head>
+
+
+<body class="app-page">
+
+
+<header class="site-header">
+
+    <div class="container nav-container">
+
+        <a href="index.html" class="brand">
+
+            <span class="brand-icon">
+                🌍
+            </span>
+
+            <span>
+                World Currency Exchange
+            </span>
+
+        </a>
+
+
+        <button
+            class="menu-button"
+            id="menuButton"
+        >
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+
+        <nav
+            class="navigation"
+            id="navigation"
+        >
+
+            <a href="index.html#home">
+                Home
+            </a>
+
+            <a href="index.html#converter">
+                Converter
+            </a>
+
+            <a href="index.html#rates">
+                Exchange Rates
+            </a>
+
+            <a href="index.html#about">
+                About
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+            <button
+                id="themeToggle"
+                class="theme-toggle"
+                title="Toggle Light / Dark Mode"
+                aria-label="Toggle Light / Dark Mode"
+                type="button"
+            >
+                <i class="fa-solid fa-moon"></i>
+                <span class="theme-toggle-text">Dark Mode</span>
+            </button>
+
+            <a
+                href="login.html"
+                id="navLoginLink"
+                class="primary-button nav-login-btn"
+            >
+                <i class="fa-solid fa-right-to-bracket"></i>
+                Login
+            </a>
+
+            <span class="user-profile" id="userProfileBadge">
+
+                <i class="fa-regular fa-user"></i>
+
+                <span id="userName">
+                    User
+                </span>
+
+            </span>
+
+
+            <button
+                id="logoutButton"
+                class="logout-button"
+            >
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                Logout
+
+            </button>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<main class="contact-page">
+
+    <div class="container contact-grid">
+
+
+        <section class="contact-info-section">
+
+            <span class="eyebrow">
+                GET IN TOUCH
+            </span>
+
+            <h1>
+                Let's start a
+                <span>conversation.</span>
+            </h1>
+
+            <p>
+                Have a question about the project, currency
+                API or website? Send us a message.
+            </p>
+
+
+            <div class="contact-details">
+
+                <div>
+
+                    <span class="contact-icon">
+                        <i class="fa-regular fa-envelope"></i>
+                    </span>
+
+                    <div>
+
+                        <strong>Email</strong>
+
+                        <p>
+                            <a href="mailto:ambatinagendrareddy@gmail.com">ambatinagendrareddy@gmail.com</a>
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div>
+
+                    <span class="contact-icon">
+                        <i class="fa-solid fa-phone"></i>
+                    </span>
+
+                    <div>
+
+                        <strong>Phone</strong>
+
+                        <p>
+                            <a href="tel:9392746593">9392746593</a>
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div>
+
+                    <span class="contact-icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </span>
+
+                    <div>
+
+                        <strong>Location</strong>
+
+                        <p>
+                            India
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div>
+
+                    <span class="contact-icon">
+                        <i class="fa-regular fa-clock"></i>
+                    </span>
+
+                    <div>
+
+                        <strong>Working Hours</strong>
+
+                        <p>
+                            Monday – Saturday
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <section class="contact-card">
+
+            <div class="auth-title">
+
+                <div class="auth-icon">
+
+                    <i class="fa-regular fa-paper-plane"></i>
+
+                </div>
+
+                <h2>
+                    Send a Message
+                </h2>
+
+                <p>
+                    Fill in the details below.
+                </p>
+
+            </div>
+
+
+            <form id="contactForm">
+
+                <!-- Botcheck Honeypot to prevent spam -->
+                <input
+                    type="checkbox"
+                    name="botcheck"
+                    id="contactBotcheck"
+                    style="display: none;"
+                >
+
+                <div class="two-columns">
+
+                    <div>
+
+                        <label for="contactName">Full Name</label>
+
+                        <div class="input-box">
+
+                            <i class="fa-regular fa-user"></i>
+
+                            <input
+                                type="text"
+                                id="contactName"
+                                name="name"
+                                placeholder="Enter your full name"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div>
+
+                        <label for="contactEmail">Email Address</label>
+
+                        <div class="input-box">
+
+                            <i class="fa-regular fa-envelope"></i>
+
+                            <input
+                                type="email"
+                                id="contactEmail"
+                                name="email"
+                                placeholder="Enter your email"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="two-columns">
+
+                    <div>
+
+                        <label for="contactPhone">Phone Number</label>
+
+                        <div class="input-box">
+
+                            <i class="fa-solid fa-phone"></i>
+
+                            <input
+                                type="tel"
+                                id="contactPhone"
+                                name="phone"
+                                placeholder="Enter phone number"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div>
+
+                        <label for="contactSubject">Subject</label>
+
+                        <div class="input-box">
+
+                            <i class="fa-regular fa-bookmark"></i>
+
+                            <input
+                                type="text"
+                                id="contactSubject"
+                                name="subject"
+                                placeholder="What is this regarding?"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <label for="contactMessage">Message</label>
+
+                <textarea
+                    id="contactMessage"
+                    name="message"
+                    rows="6"
+                    placeholder="Write your message..."
+                    required
+                ></textarea>
+
+
+                <button
+                    type="submit"
+                    id="contactSubmitBtn"
+                    class="primary-button full"
+                >
+
+                    <span id="contactBtnText">SEND MESSAGE</span>
+
+                    <i class="fa-solid fa-paper-plane" id="contactBtnIcon"></i>
+
+                </button>
+
+
+                <p
+                    id="contactStatus"
+                    class="form-message"
+                ></p>
+
+            </form>
+
+
+            <p class="demo-text">
+                Messages submitted through this form are delivered to ambatinagendrareddy@gmail.com
+            </p>
+
+        </section>
+
+    </div>
+
+</main>
+
+
+<footer class="footer">
+
+    <div class="container">
+
+        <span>
+            © 2026 World Currency Exchange
+        </span>
+
+        <a href="index.html">
+            Dashboard
+        </a>
+
+    </div>
+
+</footer>
+
+
+<div
+    id="toastContainer"
+    class="toast-container"
+></div>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

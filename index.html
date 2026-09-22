@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="World Currency Exchange"
+    >
+
+    <title>World Currency Exchange</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        (function() {
+            try {
+                var savedTheme = localStorage.getItem('worldCurrencyTheme') || 'light';
+                document.documentElement.setAttribute('data-theme', savedTheme);
+            } catch (e) {}
+        })();
+    </script>
+
+</head>
+
+
+<body
+    class="app-page"
+    data-protected="true"
+>
+
+
+<header class="site-header">
+
+    <div class="container nav-container">
+
+        <a href="#home" class="brand">
+
+            <span class="brand-icon">
+                🌍
+            </span>
+
+            <span>
+                World Currency Exchange
+            </span>
+
+        </a>
+
+
+        <button
+            class="menu-button"
+            id="menuButton"
+        >
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+
+        <nav
+            class="navigation"
+            id="navigation"
+        >
+
+            <a href="#home">Home</a>
+
+            <a href="#converter">
+                Converter
+            </a>
+
+            <a href="#rates">
+                Exchange Rates
+            </a>
+
+            <a href="#about">
+                About
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+            <button
+                id="themeToggle"
+                class="theme-toggle"
+                title="Toggle Light / Dark Mode"
+                aria-label="Toggle Light / Dark Mode"
+                type="button"
+            >
+                <i class="fa-solid fa-moon"></i>
+                <span class="theme-toggle-text">Dark Mode</span>
+            </button>
+
+            <span class="user-profile">
+
+                <i class="fa-regular fa-user"></i>
+
+                <span id="userName">
+                    User
+                </span>
+
+            </span>
+
+
+            <button
+                id="logoutButton"
+                class="logout-button"
+            >
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                Logout
+
+            </button>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<main>
+
+
+<!-- HERO -->
+
+<section
+    id="home"
+    class="hero"
+>
+
+    <div class="container hero-grid">
+
+        <div class="hero-content">
+
+            <span class="eyebrow">
+                SMART CURRENCY CONVERSION
+            </span>
+
+            <h1>
+                Smart Currency
+                <span>Conversion</span>
+                for a Connected World.
+            </h1>
+
+            <p>
+                Convert currencies quickly, explore exchange
+                rates and simplify your international
+                calculations with one modern dashboard.
+            </p>
+
+
+            <div class="hero-buttons">
+
+                <a
+                    href="#converter"
+                    class="primary-button"
+                >
+
+                    Convert Currency
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+
+                <a
+                    href="#rates"
+                    class="secondary-button"
+                >
+
+                    <i class="fa-solid fa-chart-line"></i>
+
+                    View Rates
+
+                </a>
+
+            </div>
+
+
+            <div class="trust-row">
+
+                <span>
+                    <i class="fa-solid fa-circle-check"></i>
+                    Responsive
+                </span>
+
+                <span>
+                    <i class="fa-solid fa-circle-check"></i>
+                    API Ready
+                </span>
+
+                <span>
+                    <i class="fa-solid fa-circle-check"></i>
+                    Easy to Use
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-visual">
+
+            <div class="orbit orbit-one"></div>
+            <div class="orbit orbit-two"></div>
+
+            <div class="globe">
+
+                🌍
+
+                <span class="currency usd">
+                    <img src="https://flagcdn.com/w40/us.png" srcset="https://flagcdn.com/w40/us.png 1x, https://flagcdn.com/w80/us.png 2x" width="16" height="11" alt="US" class="currency-flag-img">
+                    USD
+                </span>
+
+                <span class="currency eur">
+                    <img src="https://flagcdn.com/w40/eu.png" srcset="https://flagcdn.com/w40/eu.png 1x, https://flagcdn.com/w80/eu.png 2x" width="16" height="11" alt="EU" class="currency-flag-img">
+                    EUR
+                </span>
+
+                <span class="currency inr">
+                    <img src="https://flagcdn.com/w40/in.png" srcset="https://flagcdn.com/w40/in.png 1x, https://flagcdn.com/w80/in.png 2x" width="16" height="11" alt="IN" class="currency-flag-img">
+                    INR
+                </span>
+
+                <span class="currency gbp">
+                    <img src="https://flagcdn.com/w40/gb.png" srcset="https://flagcdn.com/w40/gb.png 1x, https://flagcdn.com/w80/gb.png 2x" width="16" height="11" alt="GB" class="currency-flag-img">
+                    GBP
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- CONVERTER -->
+
+<section
+    id="converter"
+    class="section"
+>
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="eyebrow">
+                CURRENCY CONVERTER
+            </span>
+
+            <h2>
+                Convert with clarity.
+            </h2>
+
+            <p>
+                Select your currencies and enter the amount
+                you want to convert.
+            </p>
+
+        </div>
+
+
+        <div class="converter-card">
+
+            <div class="converter-heading">
+
+                <div>
+
+                    <small>
+                        QUICK CONVERSION
+                    </small>
+
+                    <h3>
+                        Currency Converter
+                    </h3>
+
+                </div>
+
+
+                <span id="apiStatus">
+                    ● Ready
+                </span>
+
+            </div>
+
+
+            <div class="converter-grid">
+
+
+                <div>
+
+                    <label>
+                        Amount
+                    </label>
+
+                    <div class="input-box">
+
+                        <span
+                            id="amountSymbol"
+                            class="amount-symbol"
+                        >
+                            $
+                        </span>
+
+                        <input
+                            type="number"
+                            id="amount"
+                            min="0"
+                            step="any"
+                            placeholder="Enter Amount"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div>
+
+                    <label>
+                        From Currency
+                    </label>
+
+                    <div class="input-box">
+
+                        <span id="fromCurrencyFlag" class="currency-flag-badge">
+                            <img src="https://flagcdn.com/w40/us.png" srcset="https://flagcdn.com/w40/us.png 1x, https://flagcdn.com/w80/us.png 2x" width="22" height="15" alt="USD flag" class="currency-flag-img">
+                        </span>
+
+                        <select id="fromCurrency"></select>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    id="swapButton"
+                    class="swap-button"
+                    title="Swap currencies"
+                >
+
+                    <i class="fa-solid fa-right-left"></i>
+
+                </button>
+
+
+                <div>
+
+                    <label>
+                        To Currency
+                    </label>
+
+                    <div class="input-box">
+
+                        <span id="toCurrencyFlag" class="currency-flag-badge">
+                            <img src="https://flagcdn.com/w40/in.png" srcset="https://flagcdn.com/w40/in.png 1x, https://flagcdn.com/w80/in.png 2x" width="22" height="15" alt="INR flag" class="currency-flag-img">
+                        </span>
+
+                        <select id="toCurrency"></select>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <button
+                id="convertButton"
+                class="primary-button convert-button"
+            >
+
+                CONVERT
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </button>
+
+
+            <p
+                id="converterMessage"
+                class="converter-message"
+            >
+                Enter an amount to calculate a conversion.
+            </p>
+
+
+            <div
+                id="conversionResult"
+                class="conversion-result hidden"
+            ></div>
+
+
+            <small class="updated">
+                Exchange-rate source:
+                Frankfurter API
+                •
+                <span id="lastUpdated">
+                    Not loaded
+                </span>
+            </small>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- RATES -->
+
+<section
+    id="rates"
+    class="section rates-section"
+>
+
+    <div class="container">
+
+        <div class="section-heading rates-heading">
+
+            <div>
+
+                <span class="eyebrow">
+                    EXCHANGE RATES
+                </span>
+
+                <h2>
+                    Market reference rates.
+                </h2>
+
+                <p>
+                    Latest available rates from the configured
+                    exchange-rate service.
+                </p>
+
+            </div>
+
+
+            <button
+                id="refreshRates"
+                class="secondary-button"
+            >
+
+                <i class="fa-solid fa-rotate"></i>
+
+                Refresh Rates
+
+            </button>
+
+        </div>
+
+
+        <div class="table-card">
+
+            <div class="table-tools">
+
+                <div class="search-box">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <input
+                        type="search"
+                        id="rateSearch"
+                        placeholder="Search currency..."
+                    >
+
+                </div>
+
+
+                <span id="ratesStatus">
+                    Loading...
+                </span>
+
+            </div>
+
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Currency</th>
+                            <th>Code</th>
+                            <th>Rate vs INR</th>
+                            <th>Change</th>
+                            <th>Updated</th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="ratesBody">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ABOUT -->
+
+<section
+    id="about"
+    class="section"
+>
+
+    <div class="container about-grid">
+
+        <div>
+
+            <span class="eyebrow">
+                ABOUT THE PROJECT
+            </span>
+
+            <h2>
+                Built for a connected world.
+            </h2>
+
+            <p>
+                World Currency Exchange is a professional
+                BTech CSE project designed to provide a
+                simple and responsive currency conversion
+                experience.
+            </p>
+
+            <p>
+                The project demonstrates frontend
+                authentication, LocalStorage, API
+                integration, JavaScript validation,
+                responsive design and modern UI development.
+            </p>
+
+        </div>
+
+
+        <div class="stats-grid">
+
+            <div class="stat-card">
+                <strong>150+</strong>
+                <span>Currency-ready architecture</span>
+            </div>
+
+            <div class="stat-card">
+                <strong>24/7</strong>
+                <span>Web access</span>
+            </div>
+
+            <div class="stat-card">
+                <strong>Fast</strong>
+                <span>Conversion interface</span>
+            </div>
+
+            <div class="stat-card">
+                <strong>100%</strong>
+                <span>Responsive design</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<footer class="footer">
+
+    <div class="container">
+
+        <span>
+            © 2026 World Currency Exchange
+            • Academic Project
+        </span>
+
+        <a href="contact.html">
+            Contact Us
+        </a>
+
+    </div>
+
+</footer>
+
+
+<div
+    id="toastContainer"
+    class="toast-container"
+></div>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login | World Currency Exchange</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        (function() {
+            // Login page must always open in the default LIGHT/WHITE appearance
+            document.documentElement.setAttribute('data-theme', 'light');
+        })();
+    </script>
+</head>
+
+<body class="auth-page">
+
+    <div class="auth-theme-wrapper">
+        <button
+            id="themeToggle"
+            class="theme-toggle auth-theme-toggle"
+            title="Toggle Light / Dark Mode"
+            aria-label="Toggle Light / Dark Mode"
+            type="button"
+        >
+            <i class="fa-solid fa-moon"></i>
+            <span class="theme-toggle-text">Dark Mode</span>
+        </button>
+    </div>
+
+    <div class="floating-currency">$</div>
+    <div class="floating-currency euro">€</div>
+    <div class="floating-currency rupee">₹</div>
+    <div class="floating-currency pound">£</div>
+    <div class="floating-currency yen">¥</div>
+
+    <main class="auth-container">
+
+        <section class="auth-info">
+
+            <a href="login.html" class="brand">
+                <span class="brand-icon">🌍</span>
+                <span>World Currency Exchange</span>
+            </a>
+
+            <div class="auth-info-content">
+
+                <span class="eyebrow">
+                    SMART • SIMPLE • GLOBAL
+                </span>
+
+                <h1>
+                    Move money with
+                    <span>confidence.</span>
+                </h1>
+
+                <p>
+                    Convert currencies, explore exchange rates and
+                    manage your global finance calculations in one
+                    modern dashboard.
+                </p>
+
+                <div class="mini-features">
+
+                    <span>
+                        <i class="fa-solid fa-bolt"></i>
+                        Fast Conversion
+                    </span>
+
+                    <span>
+                        <i class="fa-solid fa-shield-halved"></i>
+                        Secure Demo
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="auth-card">
+
+            <div class="auth-title">
+
+                <div class="auth-icon">
+                    <i class="fa-solid fa-right-to-bracket"></i>
+                </div>
+
+                <h2>Welcome Back</h2>
+
+                <p>
+                    Login to your World Currency Exchange account.
+                </p>
+
+            </div>
+
+
+            <form id="loginForm">
+
+                <label>Email Address</label>
+
+                <div class="input-box">
+
+                    <i class="fa-regular fa-envelope"></i>
+
+                    <input
+                        type="email"
+                        id="loginEmail"
+                        placeholder="Enter your email"
+                        autocomplete="email"
+                        required
+                    >
+
+                </div>
+
+
+                <label>Password</label>
+
+                <div class="input-box">
+
+                    <i class="fa-solid fa-lock"></i>
+
+                    <input
+                        type="password"
+                        id="loginPassword"
+                        placeholder="Enter your password"
+                        autocomplete="current-password"
+                        required
+                    >
+
+                    <button
+                        type="button"
+                        class="password-toggle"
+                        data-target="loginPassword"
+                    >
+                        <i class="fa-regular fa-eye"></i>
+                    </button>
+
+                </div>
+
+
+                <div class="login-options">
+
+                    <label class="remember">
+
+                        <input
+                            type="checkbox"
+                            id="rememberMe"
+                        >
+
+                        <span>Remember me</span>
+
+                    </label>
+
+                    <a href="forgot-password.html">
+                        Forgot password?
+                    </a>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="primary-button full"
+                >
+                    LOGIN
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+
+                <p
+                    id="loginMessage"
+                    class="form-message"
+                ></p>
+
+            </form>
+
+
+            <div class="divider">
+                <span>New here?</span>
+            </div>
+
+
+            <a
+                href="register.html"
+                class="secondary-button full center"
+            >
+                Create Account
+            </a>
+
+
+            <p class="demo-text">
+                Frontend academic project • LocalStorage authentication
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
